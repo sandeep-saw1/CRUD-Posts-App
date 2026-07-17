@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div style="border: 1px solid black; width: 250px; padding-bottom: 5px; border-radius: 5px;">
+    <h2 style="padding-left: 5px;">Delete Post</h2>
+
+<h3>@<%= post.username %></h3>
+<p><%= post.content %></p>
+
+<form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+    <button type="submit" class="DeleteBT" style="margin-left: 5px;">
+        Delete Post
+    </button>
+    <a href="/posts" class="EditBT">Cancel</a>
+</form>
+
+</div>
+
+
+</body>
+</html>
